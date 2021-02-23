@@ -45,7 +45,7 @@ void update(int start, int end, int node, int left, int right, ll diff)
     update(mid+1, end, node*2+1, left, right, diff);
     tree[node].value = tree[node*2].value + tree[node*2+1].value;
 }
-ll sum(int start, int end, int node, int left, int right) /// left~right ±¸°£ÇÕ
+ll sum(int start, int end, int node, int left, int right) /// left~right Â±Â¸Â°Â£Ã‡Ã•
 {
     propagation(start, end, node);
     if(end < left || right < start) return 0;
